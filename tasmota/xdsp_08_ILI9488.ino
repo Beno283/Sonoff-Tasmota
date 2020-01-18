@@ -125,7 +125,7 @@ void ILI9488_InitDriver()
 
 #ifdef USE_TOUCH_BUTTONS
 void ILI9488_MQTT(uint8_t count,const char *cp) {
-  ResponseTime_P(PSTR(",\"RA8876\":{\"%s%d\":\"%d\"}}"), cp,count+1,(buttons[count]->vpower&0x80)>>7);
+  ResponseTime_P(PSTR(",\"ILI9488\":{\"%s%d\":\"%d\"}}"), cp,count+1,(buttons[count]->vpower&0x80)>>7);
   MqttPublishTeleSensor();
 }
 
