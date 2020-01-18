@@ -91,6 +91,10 @@ enum {SCRIPT_LOGLEVEL=1,SCRIPT_TELEPERIOD};
   LinkedList<MQTT_Subscription> subscriptions;
 #endif    //SUPPORT_MQTT_EVENT
 
+#ifndef MAXBUTTONS
+#define MAXBUTTONS 16
+#endif
+
 #ifdef USE_DISPLAY
 #ifdef USE_TOUCH_BUTTONS
 #include <renderer.h>
